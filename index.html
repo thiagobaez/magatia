@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGATIA - La Paz, Entre Ríos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="src/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVLFKWJ1KC">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DVLFKWJ1KC');
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo" id="inicio">
+            <img src="src/magatia.png" alt="Logo de Magatia">
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" onclick="scrollToSection('inicio')">Inicio</a></li>
+                <li><a href="#" onclick="scrollToSection('services')">Servicios</a></li>
+                <li><a href="#" onclick="scrollToSection('ubicacion')">Ubicación</a></li>
+                <li><a href="#" onclick="scrollToSection('contacto')">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="lapaz">
+        <img src="src/atardecer2.jpg" alt="atardecer">
+        <div class="texto">
+            <h1>Conocé La Paz: Donde la tranquilidad y la naturaleza se encuentran</h1>
+        </div>
+    </div>
+    <div class="whatsapp-flotante">
+        <a href="https://wa.me/5493437449165">
+        <img src="src/whatsapp.svg"> </a>
+    </div>
+    <main>
+       
+        <div class="intro">
+            <div class="bienvenidos">
+                <h2>Nuestro Alojamiento</h2>
+                <p>Bienvenido a <strong>Magatia</strong>, un amplio departamento en planta alta, ideal para disfrutar de una estadia cómoda en el corazón de <strong>La Paz, Entre Ríos</strong>.</p>
+                <ul>
+                    <li>Ubicado en pleno centro de la ciudad.</li>
+                    <li>A solo una cuadra del balneario y el río Paraná.</li>
+                    <li>A dos cuadras de la Plaza 25 de Mayo, el punto de encuentro principal.</li>
+                    <li>Cerca de restaurantes, bares y comercios locales.</li>
+                    <li>Ambiente acogedor, con todas las comodidades para una estadía placentera.</li>
+                </ul>
+            </div>
+                <img src="src/0.jpg" alt="Frente de Magatia">
+        </div>
+
+        
+        <section class="services" id="services">
+            <h2>Servicios y Comodidades</h2>
+            <ul>
+                <li><i class="fa-solid fa-user-group"></i> Capacidad de 2 a 6 personas</li>
+                <li><i class="fa-solid fa-dollar-sign"></i> Precio por persona</li>
+                <li><i class="fa-solid fa-bed"></i> Habitación con cama de dos plazas</li>
+                <li><i class="fa-solid fa-bed"></i> Dormis con dos camas simples</li>
+                <li><i class="fa-solid fa-bed"></i> Dos camas tipo marinera</li>
+                <li><i class="fa-solid fa-couch"></i> Futón en la sala de estar</li>
+                <li><i class="fa-solid fa-wifi"></i> Conexión Wi-Fi</li>
+                <li><i class="fa-solid fa-tv"></i> Televisión por cable</li>
+                <li><i class="fa-solid fa-temperature-arrow-up"></i> Calefacción</li>
+                <li><i class="fa-solid fa-fire"></i> Parrilla</li>
+                <li><i class="fa-solid fa-tree"></i> Patio</li>
+                <li><i class="fa-solid fa-car"></i> Cochera para dos vehículos</li>
+                <li><i class="fa-solid fa-mug-hot"></i> Desayuno seco</li>                
+                <li><i class="fa-solid fa-snowflake"></i> Aire acondicionado en sala y habitaciones</li>
+                <li><i class="fa-solid fa-kitchen-set"></i> Cocina equipada con utensilios, cubiertos y vajilla</li>
+            </ul>
+        </section>
+
+        <h1 class="galeria-img">Galería de imágenes</h1>
+        <div class="galeria">
+            <img src="src/2.jpg" onclick="openLightbox(0)">
+            <img src="src/3.jpg" onclick="openLightbox(1)">
+            <img src="src/122.jpg" onclick="openLightbox(2)">
+            <img src="src/23.jpg" onclick="openLightbox(3)">
+            <img src="src/7.jpg" onclick="openLightbox(4)" style="grid-column: span 2;">
+            <img src="src/8.jpg" onclick="openLightbox(5)">
+            <img src="src/6.jpg" onclick="openLightbox(6)">
+            <img src="src/9.jpg" onclick="openLightbox(7)" style="grid-column: span 2;">
+            <img src="src/10.jpg" onclick="openLightbox(8)">
+            <img src="src/11.jpg" onclick="openLightbox(9)">
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+
+        <section class="ubicacion" id="ubicacion">
+            <h2>Ubicación</h2>
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.2321106065306!2d-59.647014999999996!3d-30.739981000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b34d8d16d063e1%3A0x1a8cd1448ae96cab!2sMagatia!5e0!3m2!1ses-419!2sar!4v1739575842830!5m2!1ses-419!2sar" width="100" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <a href="https://g.page/r/Cats6YpE0YwaEAE/review" target="_blank"><h1 class="opina">¡Opiná acerca de nosotros en  <img src="src/google.svg">!</h1></a>
+
+        <section class="contacto" id="contacto">
+            <h2 class="contacto-titulo">¡Consultá por tarifas y disponibilidad!</h2>
+            <div class="contacto-info">
+                <p><i class="fa-solid fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#0e6d61607d7b627a6f7d4e636f696f7a676f206d6163206f7c"><span class="__cf_email__" data-cfemail="ed8e82839e9881998c9ead808c8a8c99848cc38e8280c38c9f">[email&#160;protected]</span></a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+5493437449165">+54 9 3437 44-9165</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5493437449165" target="_blank">WhatsApp</a></p>
+            </div>
+        </section>
+
+        <section class="actividades">
+            <h2>¿Qué hacer en La Paz?</h2>
+            <div class="grid-actividades">
+                <div class="actividad">
+                    <h3>🌊 Playas</h3>
+                    <p>Disfrutá de las playas del río Paraná, con parrillas, mesas y sombra para un día perfecto.</p>
+                    <img src="src/balneario.jpg" alt="Playas">
+                </div>
+                <div class="actividad">
+                    <h3>🎣 Pesca Deportiva</h3>
+                    <p>Uno de los mejores destinos de pesca del país. Excursiones guiadas para atrapar dorados y surubíes.</p>
+                    <img src="src/pesca.jpg" alt="Pesca Deportiva">
+
+                </div>
+                <div class="actividad">
+                    <h3>♨️ Termas de La Paz</h3>
+                    <p>Relajate en aguas termales con vistas al río. Spa y piletas de distintas temperaturas.</p>
+                    <img src="src/termas.jpg" alt="Termas de La Paz">
+                </div>
+                <div class="actividad">
+                    <h3>🚤 Paseos en lancha</h3>
+                    <p>Recorré las islas y arroyos del delta en excursiones guiadas con increíbles vistas.</p>
+                    <img src="src/lancha.jpg" alt="Paseos en lancha">
+
+                </div>
+                <div class="actividad">
+                    <h3>🎭 Fiestas populares</h3>
+                    <p>Si venís en época de festivales, podés disfrutar de eventos como la Fiesta del Surubí Entrerriano y el Carnaval de La Paz.</p>
+                    <img src="src/fiestasurubi.jpg" alt="Fiestas">
+                </div>
+                <div class="actividad">
+                    <h3>🍽️ Gastronomía local</h3>
+                    <p>Degustá platos típicos como pacú a la parrilla, dorado, surubi y postres caseros.</p>
+                    <img src="src/comida.jpg" alt="Gastronomía local">
+
+                </div>
+                <div class="actividad">
+                    <h3>🌅 Paseo en Kayak</h3>
+                    <p>Alquilá un kayak y remá por el río Paraná mientras disfrutás de un atardecer increíble.</p>
+                    <img src="src/kayak.jpg" alt="Paseo en Kayak al Atardecer">
+
+                </div>
+            
+                <section class="actividad">
+                    <div class="actividad-contenido">
+                        <h3>🏊‍♂️🚴‍♂️🏃‍♂️ Tría de La Paz</h3>
+                        <p>Reúne a atletas de todo el mundo para competir en natación, ciclismo y running, recorriendo los hermosos paisajes de la ciudad.</p>
+                        <img src="src/lapaz.webp" alt="Tría de La Paz">
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+       
+            
+
+    </main>
+    <footer>
+        <div class="elementos-footer">
+            <div class="social-media">
+                <img src="/src/letras.png" alt="magatia" class="logo-footer">
+                <h4>¡Seguinos en nuestras redes sociales!</h4>
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/magatialp" target="_blank" class="icon facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256z"/>
+                        </svg>
+                    </a>
+            
+                    <a href="https://www.instagram.com/magatialp" target="_blank" class="icon instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.airbnb.com.ar/rooms/1080392060215179410" target="_blank" class="icon airbnb">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 373.12c-25.24-31.67-40.08-59.43-45-83.18-22.55-88 112.61-88 90.06 0-5.45 24.25-20.29 52-45 83.18zm138.15 73.23c-42.06 18.31-83.67-10.88-119.3-50.47 103.9-130.07 46.11-200-18.85-200-54.92 0-85.16 46.51-73.28 100.5 6.93 29.19 25.23 62.39 54.43 99.5-32.53 36.05-60.55 52.69-85.15 54.92-50 7.43-89.11-41.06-71.3-91.09 15.1-39.16 111.72-231.18 115.87-241.56 15.75-30.07 25.56-57.4 59.38-57.4 32.34 0 43.4 25.94 60.37 59.87 36 70.62 89.35 177.48 114.84 239.09 13.17 33.07-1.37 71.29-37.01 86.64zm47-136.12C280.27 35.93 273.13 32 224 32c-45.52 0-64.87 31.67-84.66 72.79C33.18 317.1 22.89 347.19 22 349.81-3.22 419.14 48.74 480 111.63 480c21.71 0 60.61-6.06 112.37-62.4 58.68 63.78 101.26 62.4 112.37 62.4 62.89.05 114.85-60.86 89.61-130.19.02-3.89-16.82-38.9-16.82-39.58z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.turismoentrerios.com/magatia" target="_blank" class="icon entrerios">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
+                            <g>
+                                <path d="M445.06,154.352C410.115,77.368,333.233,26.827,248.63,25.425c-87.761-1.454-167.512,49.093-203.714,128.93
+                                    C19.6,157.729,0,179.451,0,205.675v78.647c0,26.227,19.604,47.95,44.924,51.321C80.517,414.166,158.449,464.605,245,464.605
+                                    c86.558,0,164.489-50.435,200.077-128.963c25.319-3.371,44.923-25.094,44.923-51.32v-78.647
+                                    C490,179.443,470.387,157.716,445.06,154.352z M248.32,44.113c74.364,1.232,142.218,43.957,175.786,109.772H65.871
+                                    C100.599,85.593,171.068,42.833,248.32,44.113z M245,445.915c-76.138,0-144.986-42.66-179.12-109.803h358.24
+                                    C389.989,403.255,321.144,445.915,245,445.915z M471.31,284.322c0,18.252-14.848,33.1-33.1,33.1H51.79
+                                    c-18.252,0-33.1-14.848-33.1-33.1v-78.647c0-18.252,14.848-33.1,33.1-33.1h386.42c18.252,0,33.1,14.848,33.1,33.1V284.322z"/>
+                                <polygon points="135.931,258.049 120.134,209.152 98.323,209.152 82.526,258.049 66.729,209.152 43.403,209.152 70.936,290.094 
+                                    94.252,290.094 109.302,246.011 124.195,290.094 147.667,290.094 175.2,209.152 151.728,209.152 	"/>
+                                <polygon points="271.634,258.049 255.837,209.152 234.026,209.152 218.228,258.049 202.432,209.152 179.106,209.152 
+                                    206.639,290.094 229.955,290.094 245.005,246.011 259.898,290.094 283.369,290.094 310.903,209.152 287.431,209.152 	"/>
+                                <polygon points="407.337,258.049 391.539,209.152 369.729,209.152 353.931,258.049 338.135,209.152 314.809,209.152 
+                                    342.342,290.094 365.658,290.094 380.708,246.011 395.601,290.094 419.072,290.094 446.605,209.152 423.134,209.152 	"/>
+                            </g>
+                            </svg>
+                    </a>
+
+    
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces útiles</h4>
+                <ul>
+                    <li><a href="#" onclick="scrollToSection('inicio')">Inicio</a></li>
+                    <li><a href="#" onclick="scrollToSection('services')">Servicios</a></li>
+                    <li><a href="#" onclick="scrollToSection('ubicacion')">Ubicación</a></li>
+                    <li><a href="#" onclick="scrollToSection('contacto')">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/3a1MSE8tu7v3yhep8" target="_blank">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ituzaingó 836, La Paz, Entre Ríos (3190)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+5493437449165" target="_blank"> <i class="fa-solid fa-phone"></i> +54 9 3437 44-9165
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cdn-cgi/l/email-protection#fa999594898f968e9b89ba979b9d9b8e939bd4999597d49b88" target="_blank">
+                        <i class="fa-solid fa-envelope"> </i> <span class="__cf_email__" data-cfemail="a7c4c8c9d4d2cbd3c6d4e7cac6c0c6d3cec689c4c8ca89c6d5">[email&#160;protected]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5493437449165">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 MAGATIA | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>

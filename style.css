@@ -1,0 +1,735 @@
+/* General Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #20211f;
+    padding: 1rem 2rem;
+    color: white;
+    top: 0;
+    position:relative;
+    z-index: 100;
+}
+
+
+header .logo img {
+    height: 60px;
+}
+
+/* Menú normal (visible en pantallas grandes) */
+header .menu {
+    display: flex; /* Menú siempre visible en pantallas grandes */
+    flex-direction: row;
+    gap: 1.5rem;
+    position: static;
+    background-color: transparent;
+    width: auto;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+header .menu ul li {
+    margin: 0;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .menu ul li a:hover {
+    color: #d7ad5e;
+}
+
+.bienvenidos{
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+}
+
+
+
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Animación del botón hamburguesa */
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Ocultar menú por defecto */
+    header .menu {
+        display: none; /* Menú oculto inicialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Justo debajo del header */
+        right: 0;
+        background-color: #20211f;
+        width: 100%;
+        padding: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        pointer-events: none;
+    }
+
+    header .menu ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    /* Mostrar menú al activarse */
+    header .menu.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    header .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .menu ul li {
+        margin: 0.5rem;
+    }
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+.lapaz {
+    position: relative;
+}
+
+.lapaz img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galeria-img{
+    text-align: center;
+}
+
+/* Estilo del texto superpuesto */
+.texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    color: white;
+    text-align: center;
+
+}
+
+.texto h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin: 10px;
+}
+
+
+
+.bienvenidos {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.bienvenidos h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.bienvenidos p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bienvenidos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bienvenidos ul li {
+    font-size: 16px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.bienvenidos ul li::before {
+    content: "✔";
+    color: #d7ad5e;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro img{
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+    margin: auto;
+    display: block;
+    
+}
+
+main .services {
+    margin-bottom: 2rem;
+}
+
+main h1 {
+    font-size: 2rem; /* Tamaño ajustado para mejor visibilidad */
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font-size: 1.75rem;
+    color: #333;
+}
+
+main p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0;
+}
+
+.galeria {
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.galeria img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+/* Estilos para el Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    user-select: none;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px){
+
+    main .intro{
+        flex-direction: column;
+    }
+
+    main .intro img{
+        width: 100%;
+    }
+
+}
+
+/* Footer Styles */
+footer {
+    background: #20211f;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.elementos-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.logo-footer{
+    height: 70px;
+}
+
+.elementos-footer div {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-links ul li{
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #d7ad5e;
+}
+
+.copyright {
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.social-icons svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+    transition: fill 0.2s ease-in-out;
+}
+
+
+.icon.instagram:hover svg{
+    fill: #E4405F;
+}
+
+.icon.facebook:hover svg{
+    fill: #1877F2;
+}
+.icon.airbnb:hover svg{
+    fill:  #ff5a5f;
+}
+.icon.entrerios:hover svg{
+    fill: #d7ad5e;
+}
+
+.contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items:center;
+    margin-bottom: 8px;
+    justify-content: center;   
+    color: white;
+    transition: color 0.3s;
+}
+
+
+.contact-info .icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 10px;
+    transition: fill 0.3s;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .texto {
+        font-size: 0.75rem;
+    }
+
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+    
+
+
+
+}
+
+footer .elementos-footer{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.whatsapp-flotante img{
+    width: 7%;
+    display: flex;
+    position: fixed;
+    border: none;
+    cursor: pointer;
+    right: 5%;
+    bottom: 2%;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.whatsapp-flotante img:hover{
+    filter: brightness(0.6);
+}
+
+@media (max-width: 768px) {
+    
+    .whatsapp-flotante img{
+        width: 15%;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+/* Estilos para la sección de servicios */
+.services {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+}
+
+/* Título */
+.services h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de la lista en columnas */
+.services ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 7px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Elementos de la lista */
+.services li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Íconos con margen y color */
+.services li i {
+    margin-right: 10px;
+    color: #d7ad5e;
+    font-size: 18px;
+}
+
+/* Diseño responsivo: en pantallas pequeñas (menos de 768px), cambia a lista vertical */
+@media (max-width: 768px) {
+    .services ul {
+        display: flex;
+        flex-direction: column;
+    
+    }
+}
+
+.actividades {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.actividades h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.grid-actividades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a la pantalla */
+    gap: 20px;
+    margin: auto;
+}
+
+.actividad {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actividad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.actividad img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px; /* Ajustá el tamaño según la imagen */
+    object-fit: cover;
+}
+
+.actividad h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.actividad p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+    .grid-actividades {
+        grid-template-columns: 1fr; /* Una columna en pantallas chicas */
+    }
+}
+
+.ubicacion {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    display: block;
+}
+
+.ubicacion h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.opina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease; 
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+a{
+text-decoration: none;
+}
+
+
+
+.opina img{
+    width: 130px;
+    margin-left: 7px;
+}
+
+
+.opina:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 670px){
+    .opina{
+        font-size: 15px;
+    }
+
+    .opina img{
+        width: 70px;
+        margin-left: 5px;
+    }
+}
+
+.contacto {
+    background: #f8f9fa;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin:40px auto;
+    margin-bottom: 0px;
+}
+
+.contacto-titulo {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contacto-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contacto-info a {
+    text-decoration: none;
+    color: #333; /* Azul */
+    font-weight: bold;
+}
+
+.contacto-info a:hover {
+    color: #7e7d7a;
+}
+
+.contacto-info i {
+    margin-right: 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+@media (max-width: 500px){ 
+
+    .no-mostrar{
+        display: none;
+    }
+
+}
