@@ -2,7 +2,8 @@
 
 Este repositorio contiene la página web oficial de **Magatia**, un alojamiento turístico ubicado en La Paz, Entre Ríos (Argentina).
 
-El sitio tiene como fin brindar información sobre el alojamiento, sus servicios, ubicación y medios de contacto para los visitantes.
+El sitio web fue desarrollado en **HTML, CSS y JavaScript**, y está disponible en línea en:  
+👉 [www.magatia.com.ar](https://www.magatia.com.ar)
 
 ---
 
